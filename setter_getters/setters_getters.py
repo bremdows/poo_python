@@ -17,12 +17,11 @@ class Millas:
 		print("Llamada al método setter")
 		self._distancia = valor
 
-# Creamos un nuevo objeto
+# Creamos un nuevo objeto 
 avion = Millas()
 
 # Indicamos la distancia
-avion.distancia = 200
+avion.definir_distancia = 200
 
 # Obtenemos su atributo distancia
-print(avion.definir.distancia)
-200
+print(avion.obtener_distancia)
