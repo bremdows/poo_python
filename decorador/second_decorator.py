@@ -4,20 +4,23 @@
     Making an ice cream without choco chips
 """
 
+from audioop import add
+
+
 def add_choco_chips( param_function ) :
     def internal_function() :
         print("Adding choco chips")
-        param_function()
-        print("Ice cream with choco chips")
+        print( param_function() )
+        print("Ice cream with choco chips\n")
     return internal_function
 
-
+@add_choco_chips
 def vanilla_icre_cream() :
-    return "Vanilla icre cream"
-
+    return "Vanilla ice cream"
+@add_choco_chips
 def lucuma_ice_cream() :
     return "Lucuma ice cream"
 
-print( vanilla_icre_cream() )
+vanilla_icre_cream()
 
-print( lucuma_ice_cream() )
+lucuma_ice_cream()
