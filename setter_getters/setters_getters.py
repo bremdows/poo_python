@@ -16,12 +16,18 @@ class Millas:
 			raise ValueError("No es posible convertir distancias menores a 0.")
 		print("Llamada al método setter")
 		self._distancia = valor
+	
+	@obtener_distancia.deleter
+	def del_distancia(self) :
+		print("Delete the propertie distancia")
+		del self._distancia
 
 # Creamos un nuevo objeto 
 avion = Millas()
 
 # Indicamos la distancia
 avion.definir_distancia = 200
-
 # Obtenemos su atributo distancia
 print(avion.obtener_distancia)
+# delete the propertie 
+del avion.del_distancia
